@@ -90,15 +90,15 @@ Example use cases:
 
 ## Roadmap
 
-- [x] Create static multi-page website (Home, Donate, Volunteer, Contact).  
-- [x] Add Google Maps embed to show donation spots.  
-- [x] Enable volunteer and donor forms.  
+- [ ] Create static multi-page website (Home, Donate, Volunteer, Contact).  
+- [ ] Add Google Maps embed to show donation spots.  
+- [ ] Enable volunteer and donor forms.  
 - [ ] Add backend for live tracking and real-time updates.  
 - [ ] User authentication (Donors, NGOs, Volunteers).  
 - [ ] Notifications for donation requests and pickups.  
 - [ ] Mobile app version for Android/iOS.  
 
-See the [open issues](https://github.com/your-username/ImpactHub/issues) for proposed features and bugs.  
+See the [open issues](https://github.com/KARISH-16/Hackintym_Sep25) for proposed features and bugs.  
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -126,7 +126,7 @@ Team members
 * Lakshana V - lakshanavijayakumar717@gmail.com
 * Geethapriya B - Geethapriyawinner@gmail.com
 
-Project Link: [)
+Project Link: [ https://github.com/KARISH-16/Hackintym_Sep25 ]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
