@@ -15,6 +15,7 @@ This platform should allow people to donate **food, money, clothes, and essentia
     <li><a href="#about-the-project">About The Project</a></li>
     <li><a href="#built-with">Built With</a></li>
     <li><a href="#getting-started">Getting Started</a></li>
+    <li><a href="#Smart Food Cycle">Smart Food Cycle</a></li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
@@ -60,7 +61,76 @@ This project is built using **basic web technologies**:
 ## Getting Started
 
 To set up and view the project locally:
-   git clone https://github.com/your-username/ImpactHub.git
+   git clone (https://github.com/KARISH-16/Hackintym_Sep25 )
+
+## Smart Food Cycle
+
+<!-- PROBLEM STATEMENT -->
+Every year, tons of food is wasted while many communities face hunger.  
+The challenge is to build a **smart donation and planning platform** that reduces food waste, redistributes excess food, and promotes sustainability through AI-powered planning and fertilizer reuse.  
+
+**Smart Food Cycle** is a community-driven web platform to:  
+* Collect leftover food and deliver it to those in need.  
+* Use **AI-powered meal planning** to suggest recipes and calculate portions.  
+* Convert food waste into **fertilizer** for sustainable gardening.  
+* Register beneficiaries for food or fertilizer assistance.  
+
+The vision is simple: **Reduce Waste → Feed Communities → Sustain Nature.**
+
+✅ **Donate Extra Food** – Users can donate food from homes, events, and canteens.  
+✅ **Book Volunteers** – Volunteers pick up donations and deliver them to shelters/orphanages.  
+✅ **AI Food Planner** – Suggests recipes, calculates food quantities, and adjusts meals by weather, people, and budget.  
+✅ **Fertilizer Redistribution** – Sends food waste to gardeners/farmers for compost/fertilizer.  
+✅ **Beneficiary Registration** – NGOs and individuals can register to receive support.  
+✅ **Responsive Design** – Works on desktop and mobile with smooth animations.  
+
+Built With: 
+- **HTML5**  
+- **CSS3**  
+- **Vanilla JavaScript (ES6)**  
+- **Google Fonts – Roboto**  
+- **Icons – Icons8 & free assets**  
+
+Usage
+
+👩‍🍳 Donors – Submit donation details (name, location, food type, quantity).
+🚴 Volunteers – Get assigned to pick up food and deliver it to registered NGOs.
+🤖 AI Planner –
+
+Input leftover food, people count, weather, and budget.
+
+Get recipes + portion recommendations instantly.
+🌱 Beneficiaries – Register to receive food or fertilizer.
+
+Example:
+
+Donating 10kg of leftover rice → Volunteer picks it up → Delivered to an orphanage.
+
+Entering “Rice + Vegetables, 50 people, Rainy Weather” → AI suggests fried rice & soups.
+
+Roadmap
+
+ Donation form & pickup system.
+
+ AI-based recipe and food portion planner.
+
+ Beneficiary registration system.
+
+ Fertilizer redistribution feature.
+
+ Add backend for real-time tracking.
+
+ Integrate maps for volunteer routing.
+
+ Mobile app version (Android/iOS).
+
+See the open issues
+ for planned features.
+
+ “Together, we can turn waste into hope.” 🌍
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+---
 
 ## Usage
 
