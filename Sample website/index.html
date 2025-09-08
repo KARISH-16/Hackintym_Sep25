@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Smart Food Cycle</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background: #f9f9f9;
+            color: #000000;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background: linear-gradient(135deg, #4CAF50, #81C784);
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.8rem;
+            animation: fadeIn 2s ease forwards;
+        }
+
+        nav {
+            margin-top: 1rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            position: relative;
+            transition: transform 0.3s;
+        }
+
+        nav a:hover {
+            transform: scale(1.1);
+        }
+
+        nav a::after {
+            content: '';
+            display: block;
+            width: 0%;
+            height: 2px;
+            background: #fff;
+            transition: width 0.3s;
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .hero {
+            background-image: url('https://www.nowrafoodstore.com.au/wp-content/uploads/2022/05/Nowra-Community-Food-Store_Donations-1024x853.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            animation: fadeIn 2s ease forwards;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(255, 255, 255, 0.4);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 600px;
+            animation: slideUp 1s ease forwards;
+        }
+
+        .hero-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+        }
+
+        section {
+            padding: 3rem 1rem;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #4CAF50;
+        }
+
+        .features-container, .steps-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .feature, .step {
+            background: white;
+            width: 280px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            padding: 1.5rem;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeUp 1s forwards;
+        }
+
+        .feature img, .step img {
+            width: 80px;
+            margin-bottom: 1rem;
+        }
+
+        .feature:hover, .step:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+        }
+
+        form {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            max-width: 400px;
+            margin: auto;
+            animation: fadeIn 1s ease forwards;
+        }
+
+        form h2 {
+            margin-bottom: 1rem;
+            text-align: center;
+            color: #4CAF50;
+        }
+
+        form input, form select, form button {
+            width: 100%;
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+        }
+
+        form button {
+            background: linear-gradient(135deg, #4CAF50, #81C784);
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        form button:hover {
+            background: linear-gradient(135deg, #388E3C, #66BB6A);
+        }
+
+        .ai-result {
+            text-align: center;
+            margin-top: 1rem;
+            font-size: 1.1rem;
+            color: #236502;
+            min-height: 100px;
+            background: #f1f1f1;
+            border-radius: 8px;
+            padding: 1rem;
+            animation: fadeIn 1s ease forwards;
+        }
+
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .about, .goal {
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+            color: #1c7308;
+        }
+
+        .about img, .goal img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes fadeUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @media (max-width: 768px) {
+            .features-container, .steps-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Smart Food Cycle</h1>
+        <nav>
+            <a href="#features">Features</a>
+            <a href="#how">How It Works</a>
+            <a href="#goal">Aim & Goal</a>
+            <a href="#donate">Donate</a>
+            <a href="#ai">AI Planner</a>
+            <a href="#register">Register</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <div class="hero-content">
+            <h2>Share, Save, Sustain</h2>
+            <p>Donate extra food, plan meals with AI, and reduce waste — building a healthier community together.</p>
+        </div>
+    </div>
+
+    <section id="features">
+        <h2>Our Features</h2>
+        <div class="features-container">
+            <div class="feature" style="animation-delay: 0.1s;">
+                <img src="https://kindnessaboveeverything.ca/wp-content/uploads/2022/02/Untitled-design-53.png" alt="Donate Food" />
+                <h3>Donate Extra Food</h3>
+                <p>Book volunteers to pick up leftover food and deliver it to nearby orphanages and shelters in need.</p>
+            </div>
+            <div class="feature" style="animation-delay: 0.3s;">
+                <img src="https://img.icons8.com/fluency/96/4CAF50/artificial-intelligence.png" alt="AI Planning" />
+                <h3>AI-Powered Planning</h3>
+                <p>Instantly get recipe suggestions and calculate food quantities based on attendees, weather, and budget.</p>
+            </div>
+            <div class="feature" style="animation-delay: 0.5s;">
+                <img src="https://img.icons8.com/fluency/96/4CAF50/plant-under-sun.png" alt="Fertilizer Redistribution" />
+                <h3>Fertilizer Redistribution</h3>
+                <p>Connect with registered gardeners to deliver unused food waste as fertilizer for sustainable gardening.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="how">
+        <h2>How It Works</h2>
+        <div class="steps-container">
+            <div class="step" style="animation-delay: 0.1s;">
+                <img src="https://thatscaring.com/cdn/shop/products/iStock-1179824820_1024x1024.jpg?v=1585946632" alt="Book Volunteer" />
+                <h3>Book a Volunteer</h3>
+                <p>Select the type of leftover food and location. A volunteer will be assigned to pick it up quickly.</p>
+            </div>
+            <div class="step" style="animation-delay: 0.3s;">
+                <img src="https://media.istockphoto.com/vectors/food-donation-and-charity-vector-id1224414210?k=6&m=1224414210&s=170667a&w=0&h=q6jgt94AfEil4LAQIXygB90JMbEZcbwxgJbqy4NcUFw=" alt="Deliver Food" />
+                <h3>Deliver to Need</h3>
+                <p>The volunteer delivers the food to registered orphanages, shelters, or beneficiaries nearby in need.</p>
+            </div>
+            <div class="step" style="animation-delay: 0.5s;">
+                <img src="https://irp-cdn.multiscreensite.com/6f444925/dms3rep/multi/meal-plan-week-white-table-among-products-cooking.jpg" alt="Plan & Sustain" />
+                <h3>Plan & Sustain</h3>
+                <p>Use AI to instantly plan food portions and recipes for leftover food, promoting a zero-waste environment.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="goal">
+        <h2>Aim & Goal</h2>
+        <div class="goal">
+            <img src="https://westmountchurch.org/wp-content/uploads/Food-Pantry.jpeg" alt="Goal" />
+            <p><strong>Aim:</strong> Reduce food waste and ensure leftover food reaches those who need it the most.</p>
+            <p><strong>Goal:</strong> Create a community-driven platform that leverages AI for smart planning and fosters sustainability through responsible food use.</p>
+        </div>
+    </section>
+
+    <section id="donate">
+        <h2>Donate Food</h2>
+        <form id="donationForm">
+            <input type="text" id="donorName" placeholder="Your Name" required />
+            <input type="text" id="location" placeholder="Pickup Location" required />
+            <select id="foodType" required>
+                <option value="">Select Food Type</option>
+                <option value="home">Home</option>
+                <option value="event">Event</option>
+                <option value="canteen">Canteen</option>
+            </select>
+            <input type="number" id="quantity" placeholder="Quantity (in kg)" required />
+            <button type="submit">Donate</button>
+        </form>
+    </section>
+
+    <section id="ai">
+        <h2>AI Recipe & Food Planner</h2>
+        <form id="aiForm">
+            <input type="text" id="leftoverFood" placeholder="Enter Leftover Food (e.g., rice, vegetables)" required />
+            <input type="number" id="peopleCount" placeholder="Number of People" required />
+            <input type="text" id="weather" placeholder="Weather (Sunny, Rainy, etc.)" required />
+            <input type="number" id="budget" placeholder="Budget in ₹" required />
+            <button type="submit">Get Recipes</button>
+        </form>
+        <div class="ai-result" id="aiResult">Enter leftover food to get recipe suggestions instantly!</div>
+    </section>
+
+    <section id="register">
+        <h2>Register as Beneficiary</h2>
+        <form id="registerForm">
+            <input type="text" id="beneficiaryName" placeholder="Your Name" required />
+            <input type="text" id="beneficiaryLocation" placeholder="Your Location" required />
+            <input type="text" id="needType" placeholder="Type of Need (Food/Fertilizer)" required />
+            <button type="submit">Register</button>
+        </form>
+    </section>
+
+    <footer>
+        &copy; 2025 Smart Food Cycle. Together for a sustainable future.
+    </footer>
+
+    <script>
+        document.getElementById('donationForm').addEventListener('submit', function(e){
+            e.preventDefault();
+            alert("Thank you for donating! A volunteer will contact you soon.");
+            this.reset();
+        });
+
+        document.getElementById('aiForm').addEventListener('submit', function(e){
+            e.preventDefault();
+            const food = document.getElementById('leftoverFood').value.trim().toLowerCase();
+            const people = document.getElementById('peopleCount').value;
+            const weather = document.getElementById('weather').value.toLowerCase();
+            const budget = document.getElementById('budget').value;
+
+            let recipes = "Mixed dishes using leftover ingredients.";
+            if(food.includes('rice')) {
+                recipes = "Rice pulao, fried rice, rice cakes.";
+            } else if(food.includes('vegetable') || food.includes('veggies')) {
+                recipes = "Vegetable soup, stir-fried veggies, mixed curry.";
+            } else if(food.includes('bread')) {
+                recipes = "Bread upma, bread rolls, croutons.";
+            } else if(food.includes('dal') || food.includes('lentil')) {
+                recipes = "Dal soup, dal paratha, spiced lentil stew.";
+            }
+
+            if(weather.includes('rainy')) {
+                recipes += " Serve warm soups and stews.";
+            } else if(weather.includes('sunny')) {
+                recipes += " Prepare light and refreshing salads.";
+            } else if(weather.includes('cold')) {
+                recipes += " Make hearty comfort foods.";
+
+            }
+
+            const quantity = Math.ceil(people * 0.5);
+            const result = `For ${people} people, you can prepare around ${quantity} kg of food. Recipes: ${recipes} Budget ₹${budget} seems sufficient.`;
+            document.getElementById('aiResult').textContent = result;
+        });
+
+        document.getElementById('registerForm').addEventListener('submit', function(e){
+            e.preventDefault();
+            alert("Registration successful! We'll notify you when food or fertilizer is available.");
+            this.reset();
+        });
+
+        const features = document.querySelectorAll('.feature');
+        const steps = document.querySelectorAll('.step');
+
+        window.addEventListener('scroll', () => {
+            [...features, ...steps].forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if(rect.top < window.innerHeight - 100){
+                    el.style.opacity = 1;
+                    el.style.transform = "translateY(0)";
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
