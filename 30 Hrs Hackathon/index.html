@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Community Donation Platform - Home</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f8f8f8;
+      color: #333;
+    }
+
+    /* Header styling */
+    header {
+      background: #2e7d32;
+      color: white;
+      text-align: center;
+      padding: 20px 0 10px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      transition: text-decoration 0.3s ease;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: #fff;
+      padding: 40px;
+      text-align: center;
+      border-radius: 10px;
+      margin: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .hero img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: 32px;
+      color: #111;
+    }
+
+    .hero span {
+      color: green;
+    }
+
+    .hero p {
+      margin-top: 15px;
+      font-size: 16px;
+      color: #555;
+    }
+
+    .buttons {
+      margin-top: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-weight: bold;
+      text-decoration: none;
+      margin: 5px;
+    }
+
+    .btn-primary {
+      background: green;
+      color: white;
+    }
+
+    .btn-secondary {
+      border: 2px solid green;
+      color: green;
+    }
+
+    .categories {
+      margin-top: 30px;
+    }
+
+    .categories a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #555;
+    }
+
+    /* How It Works Section */
+    .how-it-works {
+      background: #eee;
+      padding: 40px 20px;
+      margin: 20px;
+      border-radius: 10px;
+    }
+
+    .how-it-works h2 {
+      text-align: center;
+      color: purple;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .step {
+      background: #fff;
+      padding: 20px;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+
+    .step img {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      background: #333;
+      color: #aaa;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header with centered logo and menu -->
+  <header>
+    <h1>ImpactHub</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="donate.html">Donate</a>
+      <a href="volunteer.html">Volunteer</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <img src="Screenshot (15).png" alt="Community Volunteers">
+    <h1>Donate. Volunteer. <br>Make an Impact. <span>Now with Real-Time Food Maps.</span></h1>
+    <p>A simple way to connect those with extra resources to those in need. Help reduce waste and fight hunger in your community.</p>
+    <div class="buttons">
+      <a href="donate.html" class="btn btn-primary">Donate Now</a>
+      <a href="volunteer.html" class="btn btn-secondary">Become a Volunteer</a>
+    </div>
+    <div class="categories">
+      <a href="donate.html">Food</a> |
+      <a href="donate.html">Money</a> |
+      <a href="donate.html">Clothes</a> |
+      <a href="donate.html">Essentials</a> |
+      <a href="volunteer.html">Volunteer</a>
+    </div>
+  </div>
+
+  <!-- How It Works Section -->
+  <div class="how-it-works">
+    <h2>How It Works</h2>
+    <div class="steps">
+      <div class="step">
+        <img src="https://cdn-icons-png.flaticon.com/512/2920/2920333.png" alt="Post Donation">
+        <h3>1. Post Donation</h3>
+        <p>Donors post their donation location on the map.</p>
+      </div>
+      <div class="step">
+        <img src="https://cdn-icons-png.flaticon.com/512/681/681494.png" alt="Get Noticed">
+        <h3>2. Get Noticed</h3>
+        <p>Volunteers and NGOs see the request live on the map.</p>
+      </div>
+      <div class="step">
+        <img src="https://cdn-icons-png.flaticon.com/512/1042/1042330.png" alt="Arrange Pickup">
+        <h3>3. Arrange Pickup</h3>
+        <p>Pickup or drop-off is arranged instantly.</p>
+      </div>
+      <div class="step">
+        <img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Confirmation">
+        <h3>4. Confirmation</h3>
+        <p>Donors get confirmation when donation is picked up.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 ImpactHub. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

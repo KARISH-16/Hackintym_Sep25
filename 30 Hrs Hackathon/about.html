@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Community Donation Platform - About</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f8f8f8;
+      color: #333;
+    }
+
+    /* Header with green background, centered logo and menu */
+    header {
+      background: #2e7d32;
+      color: white;
+      text-align: center;
+      padding: 20px 0 10px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      transition: text-decoration 0.3s ease;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Section styling */
+    .section {
+      padding: 40px 20px;
+      margin: 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .section h2 {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #222;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      text-align: center;
+    }
+
+    .about-item {
+      padding: 20px;
+      background: #e6f0ff;
+      border-radius: 10px;
+    }
+
+    .about-item h3 {
+      margin: 10px 0;
+      color: #004080;
+    }
+
+    .impact {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .impact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .impact-box {
+      background: #4caf50;
+      color: white;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .impact-box:nth-child(2) {
+      background: #2196f3;
+    }
+
+    .impact-box:nth-child(3) {
+      background: #ff9800;
+    }
+
+    .impact-box p:first-child {
+      font-size: 28px;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    .quote {
+      margin-top: 40px;
+      font-style: italic;
+      color: #555;
+    }
+
+    footer {
+      background: #333;
+      color: #aaa;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header with centered logo and menu -->
+  <header>
+    <h1>ImpactHub</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="donate.html">Donate</a>
+      <a href="volunteer.html">Volunteer</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- About Us Section -->
+    <section class="section">
+      <h2>About Us</h2>
+      <div class="about-grid">
+        <div class="about-item">
+          <h3>Our Mission</h3>
+          <p>To reduce food and material waste by connecting donors directly with those in need using real-time mapping.</p>
+        </div>
+        <div class="about-item">
+          <h3>Our Vision</h3>
+          <p>A hunger-free world powered by technology, where no usable item goes to waste.</p>
+        </div>
+        <div class="about-item">
+          <h3>How We're Different</h3>
+          <p>We provide live maps for quick connections, ensuring faster donation pickups and deliveries.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section class="section impact">
+      <h2>Our Impact</h2>
+      <p>See the numbers behind our mission and success stories.</p>
+      <div class="impact-grid">
+        <div class="impact-box">
+          <p>2.5M+</p>
+          <p>Meals Saved</p>
+        </div>
+        <div class="impact-box">
+          <p>500K+</p>
+          <p>Donations via Map Pickups</p>
+        </div>
+        <div class="impact-box">
+          <p>10K+</p>
+          <p>Volunteer Hours</p>
+        </div>
+      </div>
+      <div class="quote">
+        <p>"Thanks to the real-time map, we picked up a huge donation from a restaurant and fed 100+ people in our shelter. This platform is a game-changer!"</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 ImpactHub. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
